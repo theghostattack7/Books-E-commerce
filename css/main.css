@@ -4,6 +4,10 @@
   font-size: 300%;
 }
 
+footer {
+  margin-top: 3rem;
+  border-top: 1px solid black;
+}
 /* INDEX */
 
 .main-img {
