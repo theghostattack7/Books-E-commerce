@@ -1,10 +1,40 @@
 /*LOGO*/
 #logo {
   font-size: 300%;
+  font-family: "Playwrite CU Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 1.5rem;
 }
 
 /*FOOTER*/
 footer {
   margin-top: 3rem;
   border-top: 1px solid black;
+}
+
+/*NAVIGATION*/
+nav {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+li {
+  color: black;
+  margin-left: 10rem;
+  font-size: 160%;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+/*HEADER*/
+
+header {
+  display: flex;
+  align-items: baseline;
 }
