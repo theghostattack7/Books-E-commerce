@@ -14,27 +14,72 @@ footer {
 }
 
 /*NAVIGATION*/
-nav {
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*HEADER*/
+
+header {
+  display: grid;
+  grid-template-rows: auto auto;
+  text-align: center;
+}
+#logo {
+  grid-row: 1;
+}
+
+.nav {
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 160%;
+  color: black;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
 }
 
-li {
+.nav a {
+  text-decoration: none;
   color: black;
-  margin-left: 10rem;
-  font-size: 160%;
 }
 
-ul {
-  list-style: none;
-  display: flex;
+/*MAIN TEXT*/
+
+.mainText {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr) repeat(4, 0.5fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
-/*HEADER*/
+.main-img {
+  grid-area: 1/1/4/4;
+  align-self: center;
+  justify-self: center;
+}
 
-header {
-  display: flex;
-  align-items: baseline;
+.title {
+  grid-area: 4/1/5/3;
+}
+
+.text1 {
+  grid-area: 5/1/6/3;
+}
+
+.text2 {
+  grid-area: 6/1/7/3;
+}
+
+.text3 {
+  grid-area: 7/1/8/3;
 }
