@@ -1,3 +1,5 @@
 .main-img {
-  width: 30rem;
+  width: 50rem;
+  border: 50% solid black;
+  border-radius: 5%;
 }
