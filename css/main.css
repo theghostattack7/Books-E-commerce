@@ -108,3 +108,24 @@ header {
 * {
   background-color: aliceblue;
 }
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.aboutUsText,
+.aboutUsQuote {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.aboutUsQuote {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 3rem;
+}
