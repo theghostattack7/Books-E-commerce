@@ -1,1 +1,8 @@
+.category-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
+.category-image {
+  height: 300px;
+}
