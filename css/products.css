@@ -6,4 +6,23 @@
 
 .category-image {
   height: 300px;
+  width: 200px;
+}
+
+figure {
+  width: 200px;
+  height: 400px;
+  border: 2px solid black;
+  border-radius: 10%;
+  padding: 30px;
+}
+
+.productInformation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+}
+
+.products {
+  margin-bottom: 5px;
 }
