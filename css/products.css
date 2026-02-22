@@ -20,13 +20,17 @@ figure {
 .productInformation {
   display: flex;
   justify-content: space-between;
-  margin-top: 0;
-  text-decoration: none;
   color: black;
 }
 
 .products {
   margin-bottom: 5px;
+  color: black;
+  min-height: 50px;
+}
+
+a {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 1400px) {
