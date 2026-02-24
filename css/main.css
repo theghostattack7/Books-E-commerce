@@ -6,6 +6,9 @@
   font-style: normal;
   margin-top: 1.5rem;
   grid-row: 1;
+  justify-self: center;
+  grid-column: 2;
+  margin-top: 1.5rem;
 }
 
 /*FOOTER*/
@@ -27,13 +30,17 @@ footer {
 header {
   display: grid;
   grid-template-rows: auto auto;
+  grid-template-columns: auto auto;
   text-align: center;
+  width: 100%;
 }
 
 .nav {
+  grid-column: 1/4;
   grid-row: 2;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  width: 100%;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -44,6 +51,7 @@ header {
   font-weight: 500;
   font-style: normal;
   border: 1px solid black;
+  width: 100%;
 }
 
 .nav a {
@@ -60,6 +68,22 @@ p {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+}
+
+.material-symbols-outlined {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+  align-self: center;
+  cursor: pointer;
+  padding-right: 2rem;
+
+  font-size: 3rem;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 48;
 }
 
 @media screen and (max-width: 700px) {
