@@ -11,7 +11,9 @@
 #image {
   grid-area: 1 / 1 / 5 / 5;
   height: 39.063rem;
-  align-self: center;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
 .lord-of-the-rings-information {
   grid-area: 1 / 6 / 5 / 8;
