@@ -11,3 +11,12 @@
   text-align: center;
   margin-top: 3rem;
 }
+
+@media screen and (max-width: 700px) {
+  .aboutUsQuote {
+    font-size: 80%;
+  }
+  .aboutUsText {
+    font-size: 80%;
+  }
+}
