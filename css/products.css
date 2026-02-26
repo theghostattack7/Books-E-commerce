@@ -46,6 +46,13 @@ button {
 .price {
   background-color: white;
 }
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  justify-self: center;
+}
 
 @media screen and (max-width: 1400px) {
   .category-container {
