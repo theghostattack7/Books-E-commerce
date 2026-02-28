@@ -1,4 +1,4 @@
-const buttonElement = document.querySelector("button");
+const buttonElement = document.querySelectorAll("button");
 const cartCount = document.querySelector(".cart-count");
 
 if (localStorage.number) {
@@ -7,8 +7,8 @@ if (localStorage.number) {
   cartCount.innerText = 0;
 }
 
-if (buttonElement) {
-  buttonElement.addEventListener("click", clickFunction);
+for (let i = 0; i < buttonElement; i++) {
+  buttonElement[i].addEventListener("click", clickFunction);
 }
 
 function clickFunction() {
