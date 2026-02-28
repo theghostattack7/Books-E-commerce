@@ -1,0 +1,13 @@
+.cart-titles {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.cart-heading {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  border-right: 2px solid #ccc;
+}
