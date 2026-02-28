@@ -11,3 +11,18 @@
   flex-direction: row;
   border-right: 2px solid #ccc;
 }
+
+.cart-info {
+  margin-top: 1.5rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.products-in-cart {
+  justify-self: center;
+}
+
+.price-total {
+  justify-self: center;
+}
