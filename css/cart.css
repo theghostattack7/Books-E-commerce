@@ -13,16 +13,50 @@
 }
 
 .cart-info {
-  margin-top: 1.5rem;
-
+  margin-top: 0rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 .products-in-cart {
   justify-self: center;
+  margin-top: 0rem;
 }
 
 .price-total {
   justify-self: center;
+  font-size: 2rem;
+}
+
+.cart-item {
+  font-size: 2rem;
+  justify-self: center;
+}
+
+@media screen and (max-width: 850px) {
+  .cart-item {
+    font-size: 1rem;
+    justify-self: center;
+  }
+  .price-total {
+    font-size: 1rem;
+    justify-self: center;
+  }
+  .cart-titles {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .cart-item {
+    font-size: 0.75rem;
+    justify-self: center;
+  }
+  .price-total {
+    font-size: 0.75rem;
+    justify-self: center;
+  }
+  .cart-titles {
+    font-size: 1.25rem;
+  }
 }

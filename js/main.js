@@ -1,4 +1,8 @@
 const cartCount = document.querySelector(".cart-count");
+if (cartCount) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cartCount.innerText = cart.length;
+}
 const productsInCart = document.querySelector(".products-in-cart");
 const priceTotal = document.querySelector(".price-total");
 
@@ -11,49 +15,66 @@ function addToCart(product) {
   cart.push(product);
 
   localStorage.setItem("cart", JSON.stringify(cart));
-  cartCount.innerText = cart.length;
+  if (cartCount) {
+    cartCount.innerText = cart.length;
+  }
 }
 
-document
-  .querySelector(".lordOfTheRingsButton")
-  .addEventListener("click", function () {
+const lotrButton = document.querySelector(".lordOfTheRingsButton");
+if (lotrButton) {
+  lotrButton.addEventListener("click", function () {
     addToCart({ name: "Lord of the Rings", price: 14.39 });
   });
+}
 
-  const twilightButton = document.getElementById("twilightButton");
-if(twilightButton){
+const twilightButton = document.getElementById("twilightButton");
+if (twilightButton) {
   twilightButton.addEventListener("click", function () {
     addToCart({ name: "Twilight", price: 10.49 });
+  });
 }
+
+const draculaButton = document.getElementById("draculaButton");
+if (draculaButton) {
+  draculaButton.addEventListener("click", function () {
+    addToCart({ name: "Dracula", price: 12.69 });
+  });
 }
 
-document.getElementById("draculaButton").addEventListener("click", function () {
-  addToCart({ name: "Dracula", price: 12.69 });
-});
+const duneButton = document.getElementById("duneButton");
+if (duneButton) {
+  duneButton.addEventListener("click", function () {
+    addToCart({ name: "Dune", price: 12.25 });
+  });
+}
 
-document.getElementById("duneButton").addEventListener("click", function () {
-  addToCart({ name: "Dune", price: 12.25 });
-});
-
-document.getElementById("odysseyButton").addEventListener("click", function () {
-  addToCart({ name: "The Odyssey", price: 15.29 });
-});
-
-document
-  .getElementById("steveJobsButton")
-  .addEventListener("click", function () {
+const odysseyButton = document.getElementById("odysseyButton");
+if (odysseyButton) {
+  odysseyButton.addEventListener("click", function () {
+    addToCart({ name: "The Odyssey", price: 15.29 });
+  });
+}
+const steveJobsButton = document.getElementById("steveJobsButton");
+if (steveJobsButton) {
+  steveJobsButton.addEventListener("click", function () {
     addToCart({ name: "Steve Jobs", price: 18.99 });
   });
-document
-  .getElementById("peopleWeMeetOnVacationButton")
-  .addEventListener("click", function () {
+}
+
+const peopleWeMeetOnVacationButton = document.getElementById(
+  "peopleWeMeetOnVacationButton",
+);
+if (peopleWeMeetOnVacationButton) {
+  peopleWeMeetOnVacationButton.addEventListener("click", function () {
     addToCart({ name: "People We Meet on Vacation", price: 11.24 });
   });
-document
-  .getElementById("hungerGamesButton")
-  .addEventListener("click", function () {
+}
+const hungerGamesButton = document.getElementById("hungerGamesButton");
+if (hungerGamesButton) {
+  hungerGamesButton.addEventListener("click", function () {
     addToCart({ name: "Hunger Games", price: 14.39 });
   });
+}
 
 if (productsInCart && priceTotal) {
   let cart = JSON.parse(localStorage.getItem("cart"));
@@ -70,12 +91,13 @@ if (productsInCart && priceTotal) {
       const item = cart[i];
 
       const p = document.createElement("p");
+      p.classList.add("cart-item");
       p.innerText = item.name + " -$" + item.price;
       productsInCart.appendChild(p);
 
       total = total + item.price;
     }
 
-    priceTotal.innerText = "$" + total;
+    priceTotal.innerText = "$" + total.toFixed(2);
   }
 }
