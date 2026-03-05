@@ -22,41 +22,47 @@ function addToCart(product) {
 
 const lotrButton = document.querySelector(".lordOfTheRingsButton");
 if (lotrButton) {
-  lotrButton.addEventListener("click", function () {
+  lotrButton.addEventListener("click", function (event) {
+    event.preventDefault();
     addToCart({ name: "Lord of the Rings", price: 14.39 });
   });
 }
 
 const twilightButton = document.getElementById("twilightButton");
 if (twilightButton) {
-  twilightButton.addEventListener("click", function () {
+  twilightButton.addEventListener("click", function (event) {
+    event.preventDefault();
     addToCart({ name: "Twilight", price: 10.49 });
   });
 }
 
 const draculaButton = document.getElementById("draculaButton");
 if (draculaButton) {
-  draculaButton.addEventListener("click", function () {
+  draculaButton.addEventListener("click", function (event) {
+    event.preventDefault();
     addToCart({ name: "Dracula", price: 12.69 });
   });
 }
 
 const duneButton = document.getElementById("duneButton");
 if (duneButton) {
-  duneButton.addEventListener("click", function () {
+  duneButton.addEventListener("click", function (event) {
+    event.preventDefault();
     addToCart({ name: "Dune", price: 12.25 });
   });
 }
 
 const odysseyButton = document.getElementById("odysseyButton");
 if (odysseyButton) {
-  odysseyButton.addEventListener("click", function () {
+  odysseyButton.addEventListener("click", function (event) {
+    event.preventDefault();
     addToCart({ name: "The Odyssey", price: 15.29 });
   });
 }
 const steveJobsButton = document.getElementById("steveJobsButton");
 if (steveJobsButton) {
-  steveJobsButton.addEventListener("click", function () {
+  steveJobsButton.addEventListener("click", function (event) {
+    event.preventDefault();
     addToCart({ name: "Steve Jobs", price: 18.99 });
   });
 }
@@ -65,13 +71,15 @@ const peopleWeMeetOnVacationButton = document.getElementById(
   "peopleWeMeetOnVacationButton",
 );
 if (peopleWeMeetOnVacationButton) {
-  peopleWeMeetOnVacationButton.addEventListener("click", function () {
+  peopleWeMeetOnVacationButton.addEventListener("click", function (event) {
+    event.preventDefault();
     addToCart({ name: "People We Meet on Vacation", price: 11.24 });
   });
 }
 const hungerGamesButton = document.getElementById("hungerGamesButton");
 if (hungerGamesButton) {
-  hungerGamesButton.addEventListener("click", function () {
+  hungerGamesButton.addEventListener("click", function (event) {
+    event.preventDefault();
     addToCart({ name: "Hunger Games", price: 14.39 });
   });
 }

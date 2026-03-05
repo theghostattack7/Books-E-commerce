@@ -18,23 +18,37 @@
   grid-template-columns: 1fr 1fr;
 }
 
+.price-total {
+  justify-self: center;
+  font-size: 2rem;
+  margin-top: 0rem;
+}
+
+.cart-item,
 .products-in-cart {
+  font-size: 2rem;
   justify-self: center;
   margin-top: 0rem;
 }
 
-.price-total {
-  justify-self: center;
-  font-size: 2rem;
+@media screen and (max-width: 1175px) {
+  .cart-item,
+  .products-in-cart {
+    font-size: 1.5rem;
+    justify-self: center;
+  }
+  .price-total {
+    font-size: 1.5rem;
+    justify-self: center;
+  }
+  .cart-titles {
+    font-size: 2rem;
+  }
 }
 
-.cart-item {
-  font-size: 2rem;
-  justify-self: center;
-}
-
-@media screen and (max-width: 850px) {
-  .cart-item {
+@media screen and (max-width: 885px) {
+  .cart-item,
+  .products-in-cart {
     font-size: 1rem;
     justify-self: center;
   }
@@ -47,8 +61,9 @@
   }
 }
 
-@media screen and (max-width: 450px) {
-  .cart-item {
+@media screen and (max-width: 600px) {
+  .cart-item,
+  .products-in-cart {
     font-size: 0.75rem;
     justify-self: center;
   }
@@ -58,5 +73,20 @@
   }
   .cart-titles {
     font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .cart-item,
+  .products-in-cart {
+    font-size: 0.5rem;
+    justify-self: center;
+  }
+  .price-total {
+    font-size: 0.5rem;
+    justify-self: center;
+  }
+  .cart-titles {
+    font-size: 1rem;
   }
 }
