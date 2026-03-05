@@ -98,10 +98,37 @@ if (productsInCart && priceTotal) {
     for (let i = 0; i < cart.length; i++) {
       const item = cart[i];
 
+      const row = document.createElement("div");
+      row.classList.add("cart-row");
+
       const p = document.createElement("p");
       p.classList.add("cart-item");
       p.innerText = item.name + " -$" + item.price;
-      productsInCart.appendChild(p);
+
+      const deleteButton = document.createElement("button");
+      deleteButton.classList.add("cart-button");
+      deleteButton.innerText = "Delete Item";
+
+      deleteButton.addEventListener("click", function () {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        cart.splice(i, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        row.remove();
+        priceTotal.innerText =
+          "$" +
+          cart
+            .reduce(function (sum, x) {
+              return sum + x.price;
+            }, 0)
+            .toFixed(2);
+      });
+
+      row.appendChild(p);
+      row.appendChild(deleteButton);
+
+      productsInCart.appendChild(row);
 
       total = total + item.price;
     }

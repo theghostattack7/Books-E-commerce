@@ -25,15 +25,33 @@
 }
 
 .cart-item,
-.products-in-cart {
+.products-in-cart,
+.cart-button {
   font-size: 2rem;
   justify-self: center;
   margin-top: 0rem;
 }
 
+.cart-button {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  background-color: darkgray;
+}
+
+.cart-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0
+  width: 100%
+}
+
 @media screen and (max-width: 1175px) {
   .cart-item,
-  .products-in-cart {
+  .products-in-cart,
+  .cart-button {
     font-size: 1.5rem;
     justify-self: center;
   }
@@ -48,7 +66,8 @@
 
 @media screen and (max-width: 885px) {
   .cart-item,
-  .products-in-cart {
+  .products-in-cart,
+  .cart-button {
     font-size: 1rem;
     justify-self: center;
   }
@@ -63,7 +82,8 @@
 
 @media screen and (max-width: 600px) {
   .cart-item,
-  .products-in-cart {
+  .products-in-cart,
+  .cart-button {
     font-size: 0.75rem;
     justify-self: center;
   }
@@ -78,7 +98,8 @@
 
 @media screen and (max-width: 450px) {
   .cart-item,
-  .products-in-cart {
+  .products-in-cart,
+  .cart-button {
     font-size: 0.5rem;
     justify-self: center;
   }
