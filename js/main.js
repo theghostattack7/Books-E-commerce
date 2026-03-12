@@ -85,7 +85,7 @@ if (hungerGamesButton) {
 }
 
 if (productsInCart && priceTotal) {
-  /*helped fix some bugs with Chatgpt*/
+  /*helped fix some bugs with Chatgpt and Copilot*/
   let cart = JSON.parse(localStorage.getItem("cart"));
 
   if (!cart || cart.length === 0) {
