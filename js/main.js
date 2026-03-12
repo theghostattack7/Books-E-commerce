@@ -10,7 +10,7 @@ function addToCart(product) {
   let cart = JSON.parse(localStorage.getItem("cart"));
 
   if (!cart) {
-    cart = [];
+    cart = []; /*empty brackets was taken from google ai*/
   }
   cart.push(product);
 
@@ -23,7 +23,7 @@ function addToCart(product) {
 const lotrButton = document.querySelector(".lordOfTheRingsButton");
 if (lotrButton) {
   lotrButton.addEventListener("click", function (event) {
-    event.preventDefault();
+    event.preventDefault(); /* Adapted from https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault*/
     addToCart({ name: "Lord of the Rings", price: 14.39 });
   });
 }
@@ -85,6 +85,7 @@ if (hungerGamesButton) {
 }
 
 if (productsInCart && priceTotal) {
+  /*helped fix some bugs with Chatgpt*/
   let cart = JSON.parse(localStorage.getItem("cart"));
 
   if (!cart || cart.length === 0) {
